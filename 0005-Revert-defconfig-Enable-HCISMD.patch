@@ -1,0 +1,38 @@
+From 4361fd49b96f8cb4528e2d184b91a89b81463689 Mon Sep 17 00:00:00 2001
+From: Erfan Abdi <erfangplus@gmail.com>
+Date: Thu, 4 Jun 2020 10:11:01 +0430
+Subject: [PATCH 5/8] Revert "defconfig: Enable HCISMD"
+
+This reverts commit f6f63afc68ab7cda8aa5937050618f3b8663230f.
+---
+ arch/arm64/configs/ocean_defconfig | 1 -
+ arch/arm64/configs/river_defconfig | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/arch/arm64/configs/ocean_defconfig b/arch/arm64/configs/ocean_defconfig
+index 643ab20fc596..df25df887781 100644
+--- a/arch/arm64/configs/ocean_defconfig
++++ b/arch/arm64/configs/ocean_defconfig
+@@ -1091,7 +1091,6 @@ CONFIG_NET_FLOW_LIMIT=y
+ # CONFIG_CAN is not set
+ # CONFIG_IRDA is not set
+ CONFIG_BT=y
+-CONFIG_BT_HCISMD=y
+ # CONFIG_BT_BREDR is not set
+ # CONFIG_BT_LE is not set
+ # CONFIG_BT_LEDS is not set
+diff --git a/arch/arm64/configs/river_defconfig b/arch/arm64/configs/river_defconfig
+index 649199396577..0fd641ca3711 100644
+--- a/arch/arm64/configs/river_defconfig
++++ b/arch/arm64/configs/river_defconfig
+@@ -1084,7 +1084,6 @@ CONFIG_NET_FLOW_LIMIT=y
+ # CONFIG_CAN is not set
+ # CONFIG_IRDA is not set
+ CONFIG_BT=y
+-CONFIG_BT_HCISMD=y
+ # CONFIG_BT_BREDR is not set
+ # CONFIG_BT_LE is not set
+ # CONFIG_BT_LEDS is not set
+-- 
+2.25.1
+

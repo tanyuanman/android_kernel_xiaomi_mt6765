@@ -1,0 +1,40 @@
+From 4beaf37951f06aad8b7a3f7b0f9933aa21693697 Mon Sep 17 00:00:00 2001
+From: Erfan Abdi <erfangplus@gmail.com>
+Date: Thu, 4 Jun 2020 10:12:34 +0430
+Subject: [PATCH 6/8] defconfig: Enable VHCI bluetooth for bluebinder
+
+Change-Id: I5ff4d325d0199e58018bcb24849117f39594b01c
+---
+ arch/arm64/configs/ocean_defconfig | 2 +-
+ arch/arm64/configs/river_defconfig | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm64/configs/ocean_defconfig b/arch/arm64/configs/ocean_defconfig
+index df25df887781..a85531401b08 100644
+--- a/arch/arm64/configs/ocean_defconfig
++++ b/arch/arm64/configs/ocean_defconfig
+@@ -1105,7 +1105,7 @@ CONFIG_BT_DEBUGFS=y
+ # CONFIG_BT_HCIUART is not set
+ # CONFIG_BT_HCIBCM203X is not set
+ # CONFIG_BT_HCIBFUSB is not set
+-# CONFIG_BT_HCIVHCI is not set
++CONFIG_BT_HCIVHCI=y
+ # CONFIG_BT_MRVL is not set
+ CONFIG_MSM_BT_POWER=y
+ CONFIG_BTFM_SLIM=y
+diff --git a/arch/arm64/configs/river_defconfig b/arch/arm64/configs/river_defconfig
+index 0fd641ca3711..0d14e77aac15 100644
+--- a/arch/arm64/configs/river_defconfig
++++ b/arch/arm64/configs/river_defconfig
+@@ -1098,7 +1098,7 @@ CONFIG_BT_DEBUGFS=y
+ # CONFIG_BT_HCIUART is not set
+ # CONFIG_BT_HCIBCM203X is not set
+ # CONFIG_BT_HCIBFUSB is not set
+-# CONFIG_BT_HCIVHCI is not set
++CONFIG_BT_HCIVHCI=y
+ # CONFIG_BT_MRVL is not set
+ CONFIG_MSM_BT_POWER=y
+ CONFIG_BTFM_SLIM=y
+-- 
+2.25.1
+
